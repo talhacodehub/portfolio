@@ -1,2396 +1,666 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="utf-8" />
-    <title>Talha Sheikh - Curriculum Vitae</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Talha sheikh curriculum vitae" />
-    <meta name="keywords"
-        content="HTML, CSS, JavaScript, PHP, WordPress, Laravel, Vue.js, talha sheikh cv, talha sheikh, talha">
-    <meta name="author" content="talha Sheikh" />
-    <!-- App favicon -->
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="plugins/animated/headline.css" rel="stylesheet" type="text/css" />
-    <link href="plugins/filter/magnific-popup.css" rel="stylesheet" type="text/css" />
-    <link href="css/icons.css" rel="stylesheet" type="text/css" />
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"
-        type="text/css" />
-    <link href="//fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,600,700&display=swap" rel="stylesheet">
-    <style>
-        a.bg-dark {
-            background-color: #25D366 !important;
-        }
-
-        .header-title.custom {
-            text-align: center;
-            width: 200px;
-            margin: 65px auto 0 auto;
-            position: relative;
-        }
-
-        .header-title.custom:after {
-            top: 30px !important;
-            left: 60px !important;
-        }
-
-        .error_message {
-            color: #de1616;
-            font-weight: bold;
-        }
-
-        .btn-soft-primary.mobile-margin-top {
-            color: #ffffff !important;
-            background: #4b79f6;
-        }
-
-        .header-title:after {
-            top: 28px;
-        }
-
-        /*back to top style*/
-        #topbutton {
-            display: inline-block;
-            background-color: #4b79f6;
-            width: 40px;
-            height: 40px;
-            text-align: center;
-            border-radius: 4px;
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            transition: background-color .3s,
-                opacity .5s, visibility .5s;
-            opacity: 0;
-            visibility: hidden;
-            z-index: 1000;
-        }
-
-        #topbutton::after {
-            content: "\f077";
-            font-family: FontAwesome;
-            font-weight: normal;
-            font-style: normal;
-            font-size: 20px;
-            line-height: 40px;
-            color: #fff;
-        }
-
-        #topbutton:hover {
-            cursor: pointer;
-            background-color: #333;
-        }
-
-        #topbutton:active {
-            background-color: #555;
-        }
-
-        #topbutton.show {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .no-js #loader {
-            display: none;
-        }
-
-        .js #loader {
-            display: block;
-            position: absolute;
-            left: 100px;
-            top: 0;
-        }
-
-        .se-pre-con {
-            position: fixed;
-            left: 0px;
-            top: 0px;
-            width: 100%;
-            height: 100%;
-            z-index: 9999;
-            background: url(images/Preloader_2.gif) center no-repeat #fff;
-        }
-
-        .carousel-control-next-icon,
-        .carousel-control-prev-icon {
-            background-color: #0949f5;
-            background-image: none;
-            border-radius: 50%;
-            width: 21px;
-            height: 21px;
-        }
-
-        span.carousel-control-next-icon:after {
-            content: "\f054";
-            font-family: FontAwesome;
-            font-weight: normal;
-            font-style: normal;
-            font-size: 12px;
-            line-height: 20px;
-            color: #fff;
-        }
-
-        .carousel-control-next,
-        .carousel-control-prev {
-            display: inherit;
-            top: 50px;
-        }
-
-        span.carousel-control-prev-icon:after {
-            content: "\f053";
-            font-family: FontAwesome;
-            font-weight: normal;
-            font-style: normal;
-            font-size: 12px;
-            line-height: 20px;
-            color: #fff;
-        }
-
-        .carousel-control-prev {
-            left: -50px;
-        }
-
-        .carousel-control-next {
-            right: -50px;
-        }
-
-        .carousel-item {
-            min-height: 215px;
-        }
-
-        .zoom-gallery a {
-            background: #4b79f6;
-            padding: 6px 12px;
-            border-radius: 50%;
-            color: #fff;
-            opacity: 0;
-            transition: all 0.5s ease-in-out;
-        }
-
-        .projects-wrapper .nf-item:hover .zoom-gallery a {
-            opacity: 1;
-        }
-
-        .zoom-gallery {
-            position: absolute;
-            width: 100%;
-            bottom: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-        }
-
-        .item-mask {
-            background: rgba(0, 0, 0, 0.8);
-            width: 100%;
-            height: 100%;
-        }
-
-        .item-box a {
-            display: flex;
-        }
-
-        .nf-item .item-box {
-            margin: 4px 4px;
-            border: 1px solid #f3f0f0;
-            border-radius: 4px;
-        }
-
-        .item-mask p {
-            padding-bottom: 10px;
-        }
-
-        @media (max-width: 767px) {
-            .mobile-padding-top {
-                padding-top: 15px;
-            }
-
-            .mobile-margin-top {
-                margin-bottom: 15px;
-            }
-
-            .section-md {
-                padding: 30px 0 !important;
-            }
-
-            #topbutton {
-                bottom: 50px;
-            }
-
-            .carousel-control-prev {
-                left: -30px;
-            }
-
-            .carousel-control-next {
-                right: -30px;
-            }
-
-            .carousel-item {
-                min-height: 305px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Talha Sheikh — Senior Full Stack Software Engineer · AI Solutions & Automation · Headless CMS Engineer. 8+ years across PHP, Laravel, React, Next.js, WordPress, Zoho CRM and AWS." />
+  <meta name="theme-color" content="#07090f" />
+  <title>Talha Khalid — Senior Full Stack Software Engineer | AI Solutions & Automation | Headless CMS Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="assets/style.css" rel="stylesheet">
 </head>
-
-
 <body>
-    <!-- Back to top button -->
-    <a id="topbutton"></a>
-    <div class="se-pre-con"></div>
-
-
-
-    <div class="main-wraper">
-
-        <section class="section bg-profile clip-profile" id="header">
-
-            <div class="zoo-profile">
-
-                <div class="container">
-
-                    <div class="row">
-
-                        <div class="col-sm-6 col-print-6 align-self-center mb-3 mb-lg-0">
-
-                            <div class="zoo-profile-main">
-
-                                <div class="zoo-profile-main-pic">
-
-                                    <img src="images/users/talha-sheikh.jpg?var=2" alt="Talha Sheikh"
-                                        title="Talha Sheikh" class="rounded-circle">
-
-                                    <span class="zoo-user-message">
-
-                                        <a href="https://wa.me/923104031226" target="blank"><i
-                                                class="uil uil-comment-dots"></i></a>
-
-                                    </span>
-
-                                </div>
-                                <!--end zoo-profile-main-pic-->
-
-                                <div class="zoo-profile_user-detail">
-
-                                    <h5 class="zoo-user-name">Talha Shaikh</h5>
-
-                                    <p class="cd-headline loading-bar">
-
-                                        <span class="cd-words-wrapper">
-
-                                            <b class="is-visible">WordPress Developer</b>
-
-                                            <b>PHP Developer</b>
-
-                                            <b>Angular Developer</b>
-
-                                            <b>Frontend Developer</b>
-
-                                        </span>
-
-                                    </p>
-
-                                </div>
-                                <!--end zoo-profile_user-detail-->
-
-                            </div>
-                            <!--end profile-main-pic-->
-
-                        </div>
-                        <!--end col-->
-
-                        <div class="col-sm-4 col-print-4 ml-auto">
-
-                            <ul class="list-unstyled personal-detail">
-
-                                <li><i class="'uil uil-phone-volume mr-2"></i> <b> phone </b> : +92 310-4031226</li>
-
-                                <li class="mt-2"><i class="uil uil-envelope mt-2 mr-2"></i> <b> Email </b> :
-                                    amtalhasheikh@gmail.com
-                                </li>
-
-                            </ul>
-
-                            <ul class="list-inline social-icon mb-0">
-
-                                <li class="list-inline-item">
-
-                                    <a href="https://www.linkedin.com/in/talha-sheikh-284a3a113/" class="bg-blue"
-                                        target="blank">
-
-                                        <i class="uil uil-linkedin"></i>
-
-                                    </a>
-
-                                </li>
-
-
-                                <li class="list-inline-item">
-
-                                    <a href="https://wa.me/923104031226" class="bg-secondary" target="blank">
-
-                                        <i class="uil uil-whatsapp"></i>
-
-                                    </a>
-
-                                </li>
-
-
-                            </ul><!--end social-icon-->
-
-                        </div>
-                        <!--end col-->
-
-                    </div>
-                    <!--end row-->
-
-                </div>
-                <!--end container-->
-
-            </div>
-            <!--end zoo-profile-->
-
-        </section>
-        <!--end section-->
-
-
-        <section class="section-md">
-
-            <div class="container">
-
-                <div class="row">
-
-                    <div class="col-12">
-
-                        <h4 class="header-title mb-3">About me!</h4>
-
-                    </div>
-                    <!--end col-->
-
-                    <div class="col-sm-6 col-print-6">
-
-                        <h4 class="text-primary font-weight-bold mobile-padding-top">I'm Talha</h4>
-
-
-                        <p>
-                            Full Stack Software Engineer with over 7 years of experience, specializing in SQL, PHP,
-                            WordPress, JavaScript, Angular, HTML, and CSS. I possess advanced skills in WordPress, PHP,
-                            and Angular development with a solid background in website management and development. I
-                            excel in various aspects of WordPress website creation, including design, development,
-                            headless websites, converting PSD/Figma/XD/HTML to WordPress, implementing/developing
-                            plugins, and optimizing websites for SEO.
-                        </p>
-
-                        <a href="/resume/talha-resume.docx" class="btn btn-sm btn-soft-primary mobile-margin-top"
-                            target="blank">Download CV</a>
-
-                    </div>
-                    <!--end col-->
-
-                    <div class="col-sm-5 col-print-5 offset-lg-1 align-self-center mobile-margin-top">
-
-                        <p>
-
-                            <span class="personal-detail-title">Name</span>
-
-                            <span class="personal-detail-info">Talha Sheikh</span>
-
-                        </p>
-
-                        <p>
-
-                            <span class="personal-detail-title">Spoken Langages</span>
-
-                            <span class="personal-detail-info">English - Urdu</span>
-
-                        </p>
-
-                        <p>
-
-                            <span class="personal-detail-title">Nationality</span>
-
-                            <span class="personal-detail-info">Pakistani</span>
-
-                        </p>
-
-                        <p>
-
-                            <span class="personal-detail-title">Interest</span>
-
-                            <span class="personal-detail-info">Coding, Traveling, Photography</span>
-
-                        </p>
-
-                    </div>
-                    <!--end col-->
-
-                </div>
-                <!--end row-->
-
-            </div>
-            <!--end container-->
-
-        </section>
-        <!--end section-->
-
-
-        <section class="section-md">
-
-            <div class="container">
-
-                <div class="row">
-
-                    <div class="col-12">
-
-                        <h4 class="header-title mb-3">Education & Skills</h4>
-
-                    </div>
-                    <!--end col-->
-
-                    <div class="col-sm-6 col-print-6">
-
-                        <div class="row">
-
-                            <div class="col-sm-6 col-print-6">
-
-                                <div class="resume-icon">
-
-                                    <i class="uil uil-graduation-hat"></i>
-
-                                    <h5 class="mt-n2">Education</h5>
-
-                                </div>
-                                <!--end resume-icon-->
-
-                                <div class="timeline">
-
-                                    <div class="time-item">
-
-                                        <div class="item-info">
-
-                                            <div class="font-14">2013 - 2017</div>
-
-                                            <h5 class="my-1 text-dark">BSCS</h5>
-
-                                            <p>Virtual University of Pakistan</p>
-
-                                        </div>
-
-                                    </div>
-                                    <!--end time-item-->
-
-                                    <div class="time-item mt-3">
-
-                                        <div class="item-info">
-
-                                            <div class="font-14">2010 - 2012</div>
-
-                                            <h5 class="my-1 text-dark">FSc – Pre Engineering</h5>
-
-                                            <p>Govt College of Science, Lahore Pakistan</p>
-
-                                        </div>
-
-                                    </div>
-                                    <!--end time-item-->
-
-                                    <div class="time-item  mt-3">
-
-                                        <div class="item-info">
-
-                                            <div class="font-14">2008 - 2009</div>
-
-                                            <h5 class="my-1 text-dark">Matric</h5>
-
-                                            <p>Center Model School, Samnabad, Lahore Pakistan</p>
-
-                                        </div>
-
-                                    </div>
-                                    <!--end time-item-->
-
-                                </div>
-                                <!--end timeline-->
-
-                            </div>
-                            <!--end col-->
-
-                            <div class="col-sm-6 col-print-6">
-
-                                <div class="resume-icon">
-
-                                    <i class="uil uil-suitcase-alt"></i>
-
-                                    <h5 class="mt-n2">Experience</h5>
-
-                                </div>
-                                <!--end resume-icon-->
-
-                                <div class="timeline">
-
-                                    <div class="time-item">
-
-                                        <div class="item-info">
-
-                                            <div class="font-14">2022 - Present</div>
-
-                                            <h5 class="my-1 text-dark">Full Stack Software Engineer</h5>
-
-                                            <p>Rolustech</p>
-
-                                        </div>
-
-                                    </div>
-                                    <!--end time-item-->
-
-                                    <div class="time-item  mt-3">
-
-                                        <div class="item-info">
-
-                                            <div class="font-14">2019 - 2022</div>
-
-                                            <h5 class="my-1 text-dark">Web Developer</h5>
-
-                                            <p>Prima systems</p>
-
-                                        </div>
-
-                                    </div>
-                                    <!--end time-item-->
-
-                                    <div class="time-item  mt-3">
-
-                                        <div class="item-info">
-
-                                            <div class="font-14">2017 - 2019</div>
-
-                                            <h5 class="my-1 text-dark">Web Developer</h5>
-
-                                            <p>Base29</p>
-
-                                        </div>
-
-                                    </div>
-                                    <!--end time-item-->
-
-                                </div>
-                                <!--end timeline-->
-
-                            </div>
-                            <!--end col-->
-
-                        </div>
-                        <!--end row-->
-
-                    </div>
-                    <!--end col-->
-
-                    <div class="col-sm-6 col-print-6 align-self-center">
-
-                        <div class="skills mt-4">
-
-                            <div class="skill-box">
-
-                                <h4 class="skill-title">HTML5 &amp; CSS3 </h4>
-
-                                <div class="progress-line">
-
-                                    <span data-percent="78" style="width: 92%;">
-
-                                        <span class="percent-tooltip">99%</span>
-
-                                    </span>
-
-                                </div>
-
-                            </div>
-                            <!--end skill-box-->
-
-                            <div class="skill-box">
-
-                                <h4 class="skill-title">Javascript</h4>
-
-                                <div class="progress-line">
-
-                                    <span data-percent="90" style="width: 79%;">
-
-                                        <span class="percent-tooltip">78%</span>
-
-                                    </span>
-
-                                </div>
-
-                            </div>
-                            <!--end skill-box-->
-
-                            <div class="skill-box">
-
-                                <h4 class="skill-title">Angular</h4>
-
-                                <div class="progress-line">
-
-                                    <span data-percent="90" style="width: 79%;">
-
-                                        <span class="percent-tooltip">81%</span>
-
-                                    </span>
-
-                                </div>
-
-                            </div>
-                            <!--end skill-box-->
-
-
-                            <div class="skill-box">
-
-                                <h4 class="skill-title">JQuery</h4>
-
-                                <div class="progress-line">
-
-                                    <span data-percent="80" style="width: 88%;">
-
-                                        <span class="percent-tooltip">96%</span>
-
-                                    </span>
-
-                                </div>
-
-                            </div>
-                            <!--end skill-box-->
-
-                            <div class="skill-box">
-
-                                <h4 class="skill-title">PHP </h4>
-
-                                <div class="progress-line">
-
-                                    <span data-percent="95" style="width: 82%;">
-
-                                        <span class="percent-tooltip">75%</span>
-
-                                    </span>
-
-                                </div>
-
-                            </div>
-                            <!--end skill-box-->
-
-
-                            <div class="skill-box">
-
-                                <h4 class="skill-title">MySQL</h4>
-
-                                <div class="progress-line">
-
-                                    <span data-percent="80" style="width: 88%;">
-
-                                        <span class="percent-tooltip">80%</span>
-
-                                    </span>
-
-                                </div>
-
-                            </div>
-                            <!--end skill-box-->
-
-
-                            <div class="skill-box">
-
-                                <h4 class="skill-title">SEO</h4>
-
-                                <div class="progress-line">
-
-                                    <span data-percent="95" style="width: 72%;">
-
-                                        <span class="percent-tooltip">77%</span>
-
-                                    </span>
-
-                                </div>
-
-                            </div>
-                            <!--end skill-box-->
-                            <div class="skill-box">
-
-                                <h4 class="skill-title">WordPress</h4>
-
-                                <div class="progress-line">
-
-                                    <span data-percent="95" style="width: 95%;">
-
-                                        <span class="percent-tooltip">95%</span>
-
-                                    </span>
-
-                                </div>
-
-                            </div>
-                            <!--end skill-box-->
-
-                            <div class="skill-box">
-
-                                <h4 class="skill-title">Shopify</h4>
-
-                                <div class="progress-line">
-
-                                    <span data-percent="95" style="width: 76%;">
-
-                                        <span class="percent-tooltip">70%</span>
-
-                                    </span>
-
-                                </div>
-
-                            </div>
-                            <!--end skill-box-->
-
-                            <div class="skill-box">
-
-                                <h4 class="skill-title">Git</h4>
-
-                                <div class="progress-line">
-
-                                    <span data-percent="95" style="width: 80%;">
-
-                                        <span class="percent-tooltip">85%</span>
-
-                                    </span>
-
-                                </div>
-
-                            </div>
-                            <!--end skill-box-->
-
-                            <div class="skill-box">
-
-                                <h4 class="skill-title">REST API</h4>
-
-                                <div class="progress-line">
-
-                                    <span data-percent="80" style="width: 88%;">
-
-                                        <span class="percent-tooltip">80%</span>
-
-                                    </span>
-
-                                </div>
-
-                            </div>
-                            <!--end skill-box-->
-
-                        </div>
-                        <!--end skill-->
-
-                    </div>
-                    <!--end col-->
-
-
-                </div>
-                <!--end row-->
-
-            </div>
-            <!--end container-->
-
-        </section>
-        <!--end section-->
-
-
-        <section class="bg-funfact section-md">
-
-            <div class="container">
-
-                <div class="row justify-content-center" id="counter">
-
-                    <div class="col-sm-4 digit-counter">
-
-                        <div class="media">
-
-                            <i class="uil uil-cell text-warning mr-2 align-self-center"></i>
-
-                            <div class="media-body align-self-center">
-
-                                <h3 class="mb-1"><span class="counter-value" data-count="90">10</span>+</h3>
-
-                                <h5 class="counter-name mt-0">Complated Projects</h5>
-
-                            </div>
-
-                        </div>
-                        <!--end media-->
-
-                    </div>
-                    <!--end col-->
-
-                    <div class="col-sm-4 digit-counter">
-
-                        <div class="media">
-
-                            <i class="uil uil-code text-success mr-2 align-self-center"></i>
-
-                            <div class="media-body align-self-center">
-
-                                <h3 class="mb-1"><span class="counter-value" data-count="145">1</span>k</h3>
-
-                                <h5 class="counter-name mt-0">Code Rows</h5>
-
-                            </div>
-
-                        </div>
-                        <!--end media-->
-
-                    </div>
-                    <!--end col-->
-
-                    <div class="col-sm-4 digit-counter">
-
-                        <div class="media">
-
-                            <i class="uil uil-trophy text-pink mr-2 align-self-center"></i>
-
-                            <div class="media-body align-self-center">
-
-                                <h3 class="mb-1"><span class="counter-value" data-count="6">7</span>+ Years</h3>
-
-                                <h5 class="counter-name mt-0">Experience</h5>
-
-                            </div>
-
-                        </div>
-                        <!--end media-->
-
-                    </div>
-                    <!--end col-->
-
-                </div>
-                <!--end row-->
-
-            </div>
-            <!--end container-->
-
-        </section>
-        <!--end section-->
-
-
-        <section class="section-md my-work">
-
-            <div class="container">
-
-                <div class="row">
-
-                    <div class="col-12">
-
-                        <h4 class="header-title custom mb-3" style="margin: 40px auto 0 auto;">Some of my projects</h4>
-
-                    </div>
-
-                    <div class="col-md-2">
-
-                    </div>
-
-                    <div class="col-md-8">
-
-                        <div class="row">
-
-                            <div class="col-12">
-
-                                <div class="row">
-
-                                    <ul class="col container-filter categories-filter mb-4" id="filter"
-                                        style="margin-top: 20px;">
-
-                                        <li><a class="categories active" data-filter="*">All</a></li>
-
-                                        <li><a class="categories" data-filter=".frontend">Frontend</a></li>
-
-                                        <li><a class="categories" data-filter=".backend">Backend</a></li>
-
-                                        <li><a class="categories" data-filter=".ecom">E-commerce</a></li>
-
-                                    </ul>
-                                    <!--end col-->
-
-                                </div><!-- End portfolio  -->
-
-
-                                <div class="row container-grid nf-col-3  projects-wrapper">
-
-                                    <div class="col-md-4 col-6 p-0 nf-item ecom">
-
-                                        <div class="item-box">
-
-                                            <a class="cbox-gallary1 mfp-image" href="images/portfolio/Buy-Peptides.jpg">
-
-                                                <img class="item-container " src="images/portfolio/peptide-thumbs.jpg"
-                                                    alt="" />
-
-                                                <div class="item-mask">
-
-                                                    <div class="item-caption">
-
-                                                        <p class="text-white">Purity Peptide</p>
-
-                                                    </div>
-
-                                                </div>
-
-                                            </a>
-
-                                            <div class="zoom-gallery">
-                                                <div>
-                                                    <a href="https://www.puritypeptide.com/" target="blank"
-                                                        class="external-link">
-                                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a href="images/portfolio/Buy-Peptides.jpg"
-                                                        class="mfp-image search-portfolio-item">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <!--end item-box-->
-
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item backend">
-
-                                        <div class="item-box">
-
-                                            <a class="cbox-gallary1 mfp-image"
-                                                href="images/portfolio/Cosmetic-Dermatology.jpg">
-
-                                                <img class="item-container " src="images/portfolio/slss-thumbs.jpg"
-                                                    alt="" />
-
-                                                <div class="item-mask">
-
-                                                    <div class="item-caption">
-
-                                                        <p class="text-white">Skin Laser & Surgery</p>
-
-                                                    </div>
-
-                                                </div>
-
-                                            </a>
-
-                                            <div class="zoom-gallery">
-                                                <div><a href="https://www.skinandlasers.com/" target="blank"
-                                                        class="external-link"><i class="fa fa-link"
-                                                            aria-hidden="true"></i></a>
-                                                </div>
-                                                <div><a href="images/portfolio/Cosmetic-Dermatology.jpg"
-                                                        class="mfp-image search-portfolio-item"><i class="fa fa-search"
-                                                            aria-hidden="true"></i></a>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <!--end item-box-->
-
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item ecom">
-
-                                        <div class="item-box">
-
-                                            <a class="cbox-gallary1 mfp-image"
-                                                href="images/portfolio/Lopportunita-Italiana.jpg">
-
-                                                <img class="item-container "
-                                                    src="images/portfolio/lopportunita-thumbs.jpg" alt="" />
-
-                                                <div class="item-mask">
-
-                                                    <div class="item-caption">
-
-                                                        <p class="text-white">Lopportunit Aitaliana</p>
-
-                                                    </div>
-
-                                                </div>
-
-                                            </a>
-
-                                            <div class="zoom-gallery">
-                                                <div>
-                                                    <a href="https://lopportunitaitaliana.com/" target="blank"
-                                                        class="external-link">
-                                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a href="images/portfolio/Lopportunita-Italiana.jpg"
-                                                        class="mfp-image search-portfolio-item">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <!--end item-box-->
-
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item frontend backend">
-                                        <div class="item-box">
-                                            <a class="cbox-gallary1 mfp-image"
-                                                href="images/portfolio/Prima-Systems.jpg">
-                                                <img class="item-container "
-                                                    src="images/portfolio/prima-systems-thumbs.jpg" alt="" />
-                                                <div class="item-mask">
-                                                    <div class="item-caption">
-                                                        <p class="text-white">Prima Systems</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <div class="zoom-gallery">
-                                                <div>
-                                                    <a href="https://primasystems.net/" target="blank"
-                                                        class="external-link">
-                                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a href="images/portfolio/Prima-Systems.jpg"
-                                                        class="mfp-image search-portfolio-item">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item ecom">
-
-                                        <div class="item-box">
-
-                                            <a class="cbox-gallary1 mfp-image"
-                                                href="images/portfolio/Trishia-Grace.jpg">
-
-                                                <img class="item-container " src="images/portfolio/trishia-thumbs.jpg"
-                                                    alt="" />
-
-                                                <div class="item-mask">
-
-                                                    <div class="item-caption">
-
-                                                        <p class="text-white">Trishia Grace</p>
-
-                                                    </div>
-
-                                                </div>
-
-                                            </a>
-
-                                            <div class="zoom-gallery">
-                                                <div>
-                                                    <a href="https://trishiagrace.com/" target="blank"
-                                                        class="external-link">
-                                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a href="images/portfolio/Trishia-Grace.jpg"
-                                                        class="mfp-image search-portfolio-item">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <!--end item-box-->
-
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item backend">
-
-                                        <div class="item-box">
-
-                                            <a class="cbox-gallary1 mfp-image" href="images/portfolio/auto.jpg">
-
-                                                <img class="item-container " src="images/portfolio/auto-thumbs.jpg"
-                                                    alt="" />
-
-                                                <div class="item-mask">
-
-                                                    <div class="item-caption">
-
-                                                        <p class="text-white">Auto Warranty</p>
-
-                                                    </div>
-
-                                                </div>
-
-                                            </a>
-
-                                            <div class="zoom-gallery">
-                                                <div><a href="https://www.autowarrantypoa.com/" target="blank"
-                                                        class="external-link"><i class="fa fa-link"
-                                                            aria-hidden="true"></i></a>
-                                                </div>
-                                                <div><a href="images/portfolio/auto.jpg"
-                                                        class="mfp-image search-portfolio-item"><i class="fa fa-search"
-                                                            aria-hidden="true"></i></a>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <!--end item-box-->
-
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item ecom">
-
-                                        <div class="item-box">
-
-                                            <a class="cbox-gallary1 mfp-image" href="images/portfolio/good-batch.jpg">
-
-                                                <img class="item-container "
-                                                    src="images/portfolio/good-batch-thumbs.jpg" alt="" />
-
-                                                <div class="item-mask">
-
-                                                    <div class="item-caption">
-
-                                                        <p class="text-white">Good Batch</p>
-
-                                                    </div>
-
-                                                </div>
-
-                                            </a>
-
-                                            <div class="zoom-gallery">
-                                                <div>
-                                                    <a href="https://thegoodbatch.com/" target="blank"
-                                                        class="external-link">
-                                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a href="images/portfolio/good-batch.jpg"
-                                                        class="mfp-image search-portfolio-item">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <!--end item-box-->
-
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item frontend backend">
-                                        <div class="item-box">
-                                            <a class="cbox-gallary1 mfp-image" href="images/portfolio/fixit.jpg">
-                                                <img class="item-container " src="images/portfolio/fixi-thumbst.jpg"
-                                                    alt="" />
-                                                <div class="item-mask">
-                                                    <div class="item-caption">
-                                                        <p class="text-white">Fixit</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <div class="zoom-gallery">
-                                                <div>
-                                                    <a href="https://fixit-services.net/" target="blank"
-                                                        class="external-link">
-                                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a href="images/portfolio/fixit.jpg"
-                                                        class="mfp-image search-portfolio-item">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item ecom">
-
-                                        <div class="item-box">
-
-                                            <a class="cbox-gallary1 mfp-image"
-                                                href="images/portfolio/Brown-Bag-Popcorn.jpg">
-
-                                                <img class="item-container " src="images/portfolio/bbpc-thumbs.jpg"
-                                                    alt="" />
-
-                                                <div class="item-mask">
-
-                                                    <div class="item-caption">
-
-                                                        <p class="text-white">BBPCO</p>
-
-                                                    </div>
-
-                                                </div>
-
-                                            </a>
-
-                                            <div class="zoom-gallery">
-                                                <div>
-                                                    <a href="https://www.brownbagpopcornco.com/" target="blank"
-                                                        class="external-link">
-                                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a href="images/portfolio/Brown-Bag-Popcorn.jpg"
-                                                        class="mfp-image search-portfolio-item">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <!--end item-box-->
-
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item frontend">
-                                        <div class="item-box">
-                                            <a class="cbox-gallary1 mfp-image"
-                                                href="images/portfolio/Home-Willow-Tree.jpg">
-                                                <img class="item-container " src="images/portfolio/willow-thumbs.jpg"
-                                                    alt="" />
-                                                <div class="item-mask">
-                                                    <div class="item-caption">
-                                                        <p class="text-white">Willow Tree</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <div class="zoom-gallery">
-                                                <div>
-                                                    <a href="http://willowtreemedia.com/" target="blank"
-                                                        class="external-link">
-                                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a href="images/portfolio/Home-Willow-Tree.jpg"
-                                                        class="mfp-image search-portfolio-item">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item backend">
-                                        <div class="item-box">
-                                            <a class="cbox-gallary1 mfp-image"
-                                                href="images/portfolio/CannabisCertified.jpg">
-                                                <img class="item-container "
-                                                    src="images/portfolio/canabis-home-thumbs.jpg" alt="" />
-                                                <div class="item-mask">
-                                                    <div class="item-caption">
-                                                        <p class="text-white">Cannabis Certified</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <div class="zoom-gallery">
-                                                <div>
-                                                    <a href="https://www.cannabiscertified.org/" target="blank"
-                                                        class="external-link">
-                                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a href="images/portfolio/CannabisCertified.jpg"
-                                                        class="mfp-image search-portfolio-item">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item ecom">
-
-                                        <div class="item-box">
-
-                                            <a class="cbox-gallary1 mfp-image" href="images/portfolio/iMusic.jpg">
-
-                                                <img class="item-container " src="images/portfolio/imusic-thumbs.jpg"
-                                                    alt="" />
-
-                                                <div class="item-mask">
-
-                                                    <div class="item-caption">
-
-                                                        <p class="text-white">iMusic</p>
-
-                                                    </div>
-
-                                                </div>
-
-                                            </a>
-
-                                            <div class="zoom-gallery">
-                                                <div>
-                                                    <a href="https://imusicacademy.com/" target="blank"
-                                                        class="external-link">
-                                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a href="images/portfolio/iMusic.jpg"
-                                                        class="mfp-image search-portfolio-item">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <!--end item-box-->
-
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item frontend backend">
-                                        <div class="item-box">
-                                            <a class="cbox-gallary1 mfp-image" href="images/portfolio/insight-eye.jpg">
-                                                <img class="item-container " src="images/portfolio/eye-thumbs.jpg"
-                                                    alt="" />
-                                                <div class="item-mask">
-                                                    <div class="item-caption">
-                                                        <p class="text-white">Insight Eye Clinic</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <div class="zoom-gallery">
-                                                <div>
-                                                    <a href="https://insighteye.com.au/" target="blank"
-                                                        class="external-link">
-                                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a href="images/portfolio/insight-eye.jpg"
-                                                        class="mfp-image search-portfolio-item">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item backend">
-                                        <div class="item-box">
-                                            <a class="cbox-gallary1 mfp-image"
-                                                href="images/portfolio/Hair-Transplant.jpg">
-                                                <img class="item-container " src="images/portfolio/burnstean-thumbs.jpg"
-                                                    alt="" />
-                                                <div class="item-mask">
-                                                    <div class="item-caption">
-                                                        <p class="text-white">Bernstein Medical</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <div class="zoom-gallery">
-                                                <div>
-                                                    <a href="https://www.bernsteinmedical.com/" target="blank"
-                                                        class="external-link">
-                                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a href="images/portfolio/Hair-Transplant.jpg"
-                                                        class="mfp-image search-portfolio-item">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item frontend backend">
-                                        <div class="item-box">
-                                            <a class="cbox-gallary1 mfp-image"
-                                                href="images/portfolio/American-Bancshares.jpg">
-                                                <img class="item-container " src="images/portfolio/american-thumbs.jpg"
-                                                    alt="" />
-                                                <div class="item-mask">
-                                                    <div class="item-caption">
-                                                        <p class="text-white">American Bancshares Mortgage</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <div class="zoom-gallery">
-                                                <div>
-                                                    <a href="https://myabsm.com/" target="blank" class="external-link">
-                                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a href="images/portfolio/American-Bancshares.jpg"
-                                                        class="mfp-image search-portfolio-item">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item backend">
-                                        <div class="item-box">
-                                            <a class="cbox-gallary1 mfp-image"
-                                                href="images/portfolio/Linda-G-Williams-Consulting.jpg">
-                                                <img class="item-container " src="images/portfolio/linda-thumbs.jpg"
-                                                    alt="" />
-                                                <div class="item-mask">
-                                                    <div class="item-caption">
-                                                        <p class="text-white">LINDA G. WILLIAMS</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <div class="zoom-gallery">
-                                                <div>
-                                                    <a href="https://www.lwilliamsconsulting.com/" target="blank"
-                                                        class="external-link">
-                                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a href="images/portfolio/Linda-G-Williams-Consulting.jpg"
-                                                        class="mfp-image search-portfolio-item">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item ecom">
-
-                                        <div class="item-box">
-
-                                            <a class="cbox-gallary1 mfp-image" href="images/portfolio/Porter-York.jpg">
-
-                                                <img class="item-container " src="images/portfolio/meat-thumbs.jpg"
-                                                    alt="" />
-
-                                                <div class="item-mask">
-
-                                                    <div class="item-caption">
-
-                                                        <p class="text-white">Porter & York</p>
-
-                                                    </div>
-
-                                                </div>
-
-                                            </a>
-
-                                            <div class="zoom-gallery">
-                                                <div>
-                                                    <a href="https://porterandyork.com/" target="blank"
-                                                        class="external-link">
-                                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a href="images/portfolio/Porter-York.jpg"
-                                                        class="mfp-image search-portfolio-item">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <!--end item-box-->
-
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item frontend backend">
-                                        <div class="item-box">
-                                            <a class="cbox-gallary1 mfp-image" href="images/portfolio/Orchid-Nest.jpg">
-                                                <img class="item-container " src="images/portfolio/orchid-thumbs.jpg"
-                                                    alt="" />
-                                                <div class="item-mask">
-                                                    <div class="item-caption">
-                                                        <p class="text-white">Orchid Nest</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <div class="zoom-gallery">
-                                                <div>
-                                                    <a href="https://www.orchidnest.com/" target="blank"
-                                                        class="external-link">
-                                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a href="images/portfolio/Orchid-Nest.jpg"
-                                                        class="mfp-image search-portfolio-item">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item backend">
-                                        <div class="item-box">
-                                            <a class="cbox-gallary1 mfp-image"
-                                                href="images/portfolio/Adjuster-Pinnacle.jpg">
-                                                <img class="item-container " src="images/portfolio/pinnacles-thumbs.jpg"
-                                                    alt="" />
-                                                <div class="item-mask">
-                                                    <div class="item-caption">
-                                                        <p class="text-white">Pinnacle Claim Services</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <div class="zoom-gallery">
-                                                <div>
-                                                    <a href="https://www.pinnacleclaimservices.com/" target="blank"
-                                                        class="external-link">
-                                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a href="images/portfolio/Adjuster-Pinnacle.jpg"
-                                                        class="mfp-image search-portfolio-item">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item frontend backend">
-                                        <div class="item-box">
-                                            <a class="cbox-gallary1 mfp-image" href="images/portfolio/ELYSEE.jpg">
-                                                <img class="item-container " src="images/portfolio/elysee-thumbs.jpg"
-                                                    alt="" />
-                                                <div class="item-mask">
-                                                    <div class="item-caption">
-                                                        <p class="text-white">Elysee</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <div class="zoom-gallery">
-                                                <div>
-                                                    <a href="https://elyseehomes.com/" target="blank"
-                                                        class="external-link">
-                                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a href="images/portfolio/ELYSEE.jpg"
-                                                        class="mfp-image search-portfolio-item">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item backend">
-                                        <div class="item-box">
-                                            <a class="cbox-gallary1 mfp-image"
-                                                href="images/portfolio/Schweiger-Dermatology-Group.jpg">
-                                                <img class="item-container " src="images/portfolio/sdg-thumbs.jpg"
-                                                    alt="" />
-                                                <div class="item-mask">
-                                                    <div class="item-caption">
-                                                        <p class="text-white">Schweiger Dermatology Group</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <div class="zoom-gallery">
-                                                <div>
-                                                    <a href="https://www.schweigerderm.com/" target="blank"
-                                                        class="external-link">
-                                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a href="images/portfolio/Schweiger-Dermatology-Group.jpg"
-                                                        class="mfp-image search-portfolio-item">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item backend">
-                                        <div class="item-box">
-                                            <a class="cbox-gallary1 mfp-image" href="images/portfolio/Milestone.jpg">
-                                                <img class="item-container " src="images/portfolio/milestone-thumbs.jpg"
-                                                    alt="" />
-                                                <div class="item-mask">
-                                                    <div class="item-caption">
-                                                        <p class="text-white">Milestone Gem</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <div class="zoom-gallery">
-                                                <div>
-                                                    <a href="https://milestonegem.com/" target="blank"
-                                                        class="external-link">
-                                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a href="images/portfolio/Milestone.jpg"
-                                                        class="mfp-image search-portfolio-item">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item frontend backend">
-                                        <div class="item-box">
-                                            <a class="cbox-gallary1 mfp-image"
-                                                href="images/portfolio/Cannabis-Training.jpg">
-                                                <img class="item-container " src="images/portfolio/canabis-thumbs.jpg"
-                                                    alt="" />
-                                                <div class="item-mask">
-                                                    <div class="item-caption">
-                                                        <p class="text-white">Cannabis Training</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <div class="zoom-gallery">
-                                                <div>
-                                                    <a href="https://cannabistraininginstitute.com/" target="blank"
-                                                        class="external-link">
-                                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a href="images/portfolio/Cannabis-Training.jpg"
-                                                        class="mfp-image search-portfolio-item">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item backend">
-                                        <div class="item-box">
-                                            <a class="cbox-gallary1 mfp-image"
-                                                href="images/portfolio/Kanthan-Reality.jpg">
-                                                <img class="item-container " src="images/portfolio/kanthan-thumbs.jpg"
-                                                    alt="" />
-                                                <div class="item-mask">
-                                                    <div class="item-caption">
-                                                        <p class="text-white">Kanthan Realty</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <div class="zoom-gallery">
-                                                <div>
-                                                    <a href="https://www.kanthanrealty.com/" target="blank"
-                                                        class="external-link">
-                                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a href="images/portfolio/Kanthan-Reality.jpg"
-                                                        class="mfp-image search-portfolio-item">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item backend">
-                                        <div class="item-box">
-                                            <a class="cbox-gallary1 mfp-image" href="images/portfolio/abio.jpg">
-                                                <img class="item-container " src="images/portfolio/abio-thumbs.jpg"
-                                                    alt="" />
-                                                <div class="item-mask">
-                                                    <div class="item-caption">
-                                                        <p class="text-white">Abio Properties</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <div class="zoom-gallery">
-                                                <div>
-                                                    <a href="https://abioproperties.com/" target="blank"
-                                                        class="external-link">
-                                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a href="images/portfolio/abio.jpg"
-                                                        class="mfp-image search-portfolio-item">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item ecom">
-                                        <div class="item-box">
-                                            <a class="cbox-gallary1 mfp-image" href="images/portfolio/Service-Dog.jpg">
-                                                <img class="item-container " src="images/portfolio/dog-thumbs.jpg"
-                                                    alt="" />
-                                                <div class="item-mask">
-                                                    <div class="item-caption">
-                                                        <p class="text-white">United Service Dog</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <div class="zoom-gallery">
-                                                <div>
-                                                    <a href="https://www.unitedservicedog.com/" target="blank"
-                                                        class="external-link">
-                                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a href="images/portfolio/Service-Dog.jpg"
-                                                        class="mfp-image search-portfolio-item">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item backend">
-                                        <div class="item-box">
-                                            <a class="cbox-gallary1 mfp-image" href="images/portfolio/dunings.jpg">
-                                                <img class="item-container " src="images/portfolio/dunnings-thumb.jpg"
-                                                    alt="" />
-                                                <div class="item-mask">
-                                                    <div class="item-caption">
-                                                        <p class="text-white">Dunning’s</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <div class="zoom-gallery">
-                                                <div>
-                                                    <a href="https://www.dunningsfuel.com.au/" target="blank"
-                                                        class="external-link">
-                                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a href="images/portfolio/dunings.jpg"
-                                                        class="mfp-image search-portfolio-item">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item ecom">
-                                        <div class="item-box">
-                                            <a class="cbox-gallary1 mfp-image" href="images/portfolio/little-posy.jpg">
-                                                <img class="item-container "
-                                                    src="images/portfolio/little-post-thumbs.jpg" alt="" />
-                                                <div class="item-mask">
-                                                    <div class="item-caption">
-                                                        <p class="text-white">Little Posy</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <div class="zoom-gallery">
-                                                <div>
-                                                    <a href="https://www.littleposy.com.au/" target="blank"
-                                                        class="external-link">
-                                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a href="images/portfolio/little-posy.jpg"
-                                                        class="mfp-image search-portfolio-item">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item backend">
-                                        <div class="item-box">
-                                            <a class="cbox-gallary1 mfp-image" href="images/portfolio/aquaview.jpg">
-                                                <img class="item-container " src="images/portfolio/aqua-thumbs.jpg"
-                                                    alt="" />
-                                                <div class="item-mask">
-                                                    <div class="item-caption">
-                                                        <p class="text-white">Aqua View Fencing</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <div class="zoom-gallery">
-                                                <div>
-                                                    <a href="https://www.aquaviewfencing.com/" target="blank"
-                                                        class="external-link">
-                                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a href="images/portfolio/aquaview.jpg"
-                                                        class="mfp-image search-portfolio-item">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item frontend backend">
-                                        <div class="item-box">
-                                            <a class="cbox-gallary1 mfp-image"
-                                                href="images/portfolio/Dentist-Billings.jpg">
-                                                <img class="item-container " src="images/portfolio/dentist-thumbs.jpg"
-                                                    alt="" />
-                                                <div class="item-mask">
-                                                    <div class="item-caption">
-                                                        <p class="text-white">Brian Francis</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <div class="zoom-gallery">
-                                                <div>
-                                                    <a href="https://www.brianfrancisdmd.com/" target="blank"
-                                                        class="external-link">
-                                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a href="images/portfolio/Dentist-Billings.jpg"
-                                                        class="mfp-image search-portfolio-item">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item backend">
-                                        <div class="item-box">
-                                            <a class="cbox-gallary1 mfp-image"
-                                                href="images/portfolio/Windsor-Marketplace.jpg">
-                                                <img class="item-container " src="images/portfolio/windsor-thumbs.jpg"
-                                                    alt="" />
-                                                <div class="item-mask">
-                                                    <div class="item-caption">
-                                                        <p class="text-white">Windsor Marketplace</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <div class="zoom-gallery">
-                                                <div>
-                                                    <a href="https://marketplace.windsorlifesettlements.com/"
-                                                        target="blank" class="external-link">
-                                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a href="images/portfolio/Windsor-Marketplace.jpg"
-                                                        class="mfp-image search-portfolio-item">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4 col-6 p-0 nf-item frontend backend">
-                                        <div class="item-box">
-                                            <a class="cbox-gallary1 mfp-image" href="images/portfolio/Mind-Scholar.jpg">
-                                                <img class="item-container "
-                                                    src="images/portfolio/mind-scholar-thumbs.jpg" alt="" />
-                                                <div class="item-mask">
-                                                    <div class="item-caption">
-                                                        <p class="text-white">Mind Scholar</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <div class="zoom-gallery">
-                                                <div>
-                                                    <a href="https://mindscholar.com.au/" target="blank"
-                                                        class="external-link">
-                                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a href="images/portfolio/Mind-Scholar.jpg"
-                                                        class="mfp-image search-portfolio-item">
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <!--end row-->
-
-                    </div>
-                    <!--end col-->
-
-                    <div class="col-md-2">
-
-                    </div>
-
-                    <div class="col-12">
-
-                        <h4 class="header-title custom mb-3">Refrences</h4>
-
-                    </div>
-                    <!--end col-->
-
-                    <div class="col-md-3">
-
-                    </div>
-
-                    <div class="col-md-6 col-print-6 align-self-center">
-
-                        <div class="p-4">
-
-                            <div class="text-center">
-
-                                <h2><i class="uil uil-feedback text-primary"></i></h2>
-
-                            </div>
-                            <!--end /div-->
-
-                            <div id="carouselExampleFade2" class="carousel slide" data-ride="carousel">
-
-                                <div class="carousel-inner">
-
-                                    <div class="carousel-item">
-
-                                        <div class="text-center">
-
-                                            <p class="px-4">I have worked with Talha on a range of website designs,
-                                                e-commerce solutions and core development. I have found his service to
-                                                be
-                                                creative, timely and accurate. Everyone who visits our websites gives me
-                                                nothing but compliments. He is a great developer who knows how to bring
-                                                up
-                                                solutions for more sales and revenue. Good luck to him!</p>
-
-                                            <div>
-
-                                                <img src="images/users/OG_Logo_Owais.png" alt="Owais Gilani"
-                                                    class="rounded-circle thumb-md mb-2">
-
-                                                <p class="mb-0 text-primary"><b>Owais Gilani</b></p>
-
-                                                <small class="text-muted">Craetive Director</small>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                    <!--end carousel-item-->
-
-                                    <div class="carousel-item active">
-
-                                        <div class="text-center">
-
-                                            <p class="px-4">
-                                                Talha developed many websites for me and my clients. His dedication to
-                                                his
-                                                work and knowledge specially of WordPress and Laravel is outstanding. It
-                                                is
-                                                always a good experience working with him and would love
-                                                to work again. </p>
-                                            <div>
-
-                                                <img src="images/users/adeel-adil.jpg" alt="Digital Marketing Manager"
-                                                    class="rounded-circle thumb-md mb-2">
-
-                                                <p class="mb-0 text-primary"><b>Adeel Adil</b></p>
-
-                                                <small class="text-muted">Digital Marketing Manager</small>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                    <!--end carousel-item-->
-
-                                    <div class="carousel-item">
-
-                                        <div class="text-center">
-                                            <p class="px-4">Talha is a very reliable, dedicated and knowledgeable. He is
-                                                quick, accurate, great analytical skills and a perfect Web-developer. It
-                                                is
-                                                an absolute pleasure to work with him.</p>
-                                            <div>
-
-                                                <img src="images/users/ahmed-zafer.jpg" alt="Ahmed Zafar"
-                                                    class="rounded-circle thumb-md mb-2">
-
-                                                <p class="mb-0 text-primary"><b>Ahmed Zafar</b></p>
-
-                                                <small class="text-muted">Senior Software Quality Assurance</small>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                    <!--end carousel-item-->
-
-                                </div>
-                                <!--end carousel-inner-->
-
-                                <a class="carousel-control-prev" href="#carouselExampleFade2" role="button"
-                                    data-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                </a>
-                                <a class="carousel-control-next" href="#carouselExampleFade2" role="button"
-                                    data-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                </a>
-
-                            </div>
-                            <!--end carousel-->
-
-                        </div>
-                        <!--end /div-->
-
-                    </div>
-                    <!--end col-->
-
-                    <div class="col-md-3">
-
-                    </div>
-
-                </div>
-                <!--end row-->
-
-            </div>
-            <!--end container-->
-
-        </section>
-        <!--end section-->
-
-
-        <section class="section-md my-clients">
-
-            <div class="container">
-
-                <div class="row justify-content-between">
-
-                    <div class="col-md-2 col-6">
-
-                        <img src="images/brand/1.png" alt="" class="img-fluid ">
-
-                    </div>
-                    <!--end col-->
-
-                    <div class="col-md-2 col-6">
-
-                        <img src="images/brand/php.png" alt="" class="img-fluid ">
-
-                    </div>
-                    <!--end col-->
-
-                    <div class="col-md-2 col-6">
-
-                        <img src="images/brand/3.png" alt="" class="img-fluid ">
-
-                    </div>
-                    <!--end col-->
-
-                    <div class="col-md-2 col-6">
-
-                        <img src="images/brand/update-l.png" alt="" class="img-fluid ">
-
-                    </div>
-                    <!--end col-->
-
-                    <div class="col-md-2 col-6">
-
-                        <img src="images/brand/updated-seo.png" alt="" class="img-fluid ">
-
-                    </div>
-                    <!--end col-->
-
-                </div>
-                <!--end row-->
-
-            </div>
-            <!--end container-->
-
-        </section>
-        <!--end section-->
-
-
-        <section class="section-md contact-form">
-
-            <div class="container">
-
-                <div class="row">
-
-                    <div class="col-12 mb-3">
-
-                        <h4 class="header-title mb-3">Contact Me</h4>
-
-                    </div>
-                    <!--end col-->
-
-                    <div class="col-sm-4">
-
-                        <div class="contact-info">
-
-                            <div class="icon">
-
-                                <i class='uil uil-phone-volume'></i>
-
-                            </div>
-
-                            <div class="content">
-
-                                <h5>Free Call To Me:</h5>
-
-                                <span>(+92) 310-4031226</span>
-
-                            </div>
-
-                        </div>
-                        <!--end contact-info-->
-
-
-                        <div class="contact-info">
-
-                            <div class="icon">
-
-                                <i class='uil uil-envelope'></i>
-
-                            </div>
-
-                            <div class="content">
-
-                                <h5>Mail Me:</h5>
-
-                                <span>amtalhasheikh@gmail.com</span>
-
-                            </div>
-
-                        </div>
-                        <!--end contact-info-->
-
-
-                        <div class="contact-info">
-
-                            <div class="icon">
-
-                                <i class='uil uil-map-marker'></i>
-
-                            </div>
-
-                            <div class="content">
-
-                                <h5>Find Me:</h5>
-
-                                <span>Allama Iqbal Town, Lahore, Pakistan.</span>
-
-                            </div>
-
-                        </div>
-                        <!--end contact-info-->
-
-                    </div>
-                    <!--end col-->
-
-                    <div class="col-sm-8">
-
-                        <div class="contact-form">
-
-                            <div id="message"></div>
-
-                            <form method="post" action="php/contact.php" name="contact-form" id="contact-form">
-
-                                <div class="row">
-
-                                    <div class="form-group col-md-6">
-
-                                        <label>Name</label>
-
-                                        <input type="text" name="name" class="form-control" id="name">
-
-                                    </div>
-                                    <!--end col-->
-
-                                    <div class="form-group col-md-6">
-
-                                        <label>Email address</label>
-
-                                        <input type="email" name="email" class="form-control" id="email">
-
-                                    </div>
-                                    <!--end col-->
-
-                                    <div class="form-group col-md-12">
-
-                                        <label>Message</label>
-
-                                        <textarea rows="4" name="message" class="form-control" id="comments"></textarea>
-
-                                    </div>
-                                    <!--end col-->
-
-                                    <div class="form-group col-md-12">
-
-                                        <input type="submit" value="Submit now" name="submit" id="submit"
-                                            class="btn btn-primary px-5 py-2">
-
-                                        <div id="simple-msg"></div>
-
-                                    </div>
-                                    <!--end col-->
-
-                                </div>
-                                <!--end row-->
-
-                            </form>
-                            <!--end form-->
-
-                        </div>
-                        <!--end contact-form-->
-
-                    </div>
-                    <!--end col-->
-
-                    <div class="col-md-12">
-                        <!-- <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.8895105179186!2d74.29145761448308!3d31.527194453960924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391903dc299e72c7%3A0xa045920510498cb!2sSolutions99!5e0!3m2!1sen!2s!4v1629142430457!5m2!1sen!2s"
-                            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
-                    </div>
-
-                </div>
-                <!--end row-->
-
-            </div>
-            <!--end container-->
-
-        </section>
-        <!--end section-->
-
-
-        <section class="section-md thanks-text">
-
-            <div class="container">
-
-                <div class="row">
-
-                    <div class="col-12">
-
-                        <h3 class="text-center">Thank you !</h3>
-
-                    </div>
-                    <!--end col-->
-
-                </div>
-                <!--end row-->
-
-            </div>
-            <!--end container-->
-
-        </section>
-        <!--end section-->
-
-        <footer class="footer-area">
-
-            <div class="container">
-
-                <div class="row">
-
-                    <div class="col-sm-12 text-center">
-
-                        <p class="copyright mb-0 py-4">“Fix the cause, not the symptom.” – Steve Maguire</p>
-
-                    </div>
-                    <!--end col-->
-
-                </div>
-                <!--end row-->
-
-            </div>
-            <!--end container-->
-
-        </footer>
-        <!--end footer-area-->
-
+  <div class="bg-mesh" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- ============= HEADER ============= -->
+  <header id="site-header">
+    <div class="nav-inner">
+      <a href="#top" class="brand">
+        <span class="brand-mark">TS</span>
+        <span class="brand-name">Talha Khalid <span>· Senior Engineer</span></span>
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#top">About</a></li>
+          <li><a href="#stack">Stack</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#wordpress">WordPress</a></li>
+          <li><a href="#references">References</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-btn" id="themeToggle" type="button" aria-label="Toggle color theme">
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menuToggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
     </div>
-    <!--end main-wraper-->
+  </header>
 
+  <main class="wrap">
+    <!-- ============= HERO ============= -->
+    <section class="hero" id="top">
+      <div class="hero-grid reveal">
+        <div>
+          <div class="badge-row">
+            <span class="badge"><span class="dot"></span> Open to opportunities</span>
+            <span class="badge accent">8+ years · Senior Engineer</span>
+          </div>
+          <h1>
+            Talha Khalid<br />
+            <span class="gradient-text">Senior Full Stack Software Engineer | Headless CMS Engineer</span>
+          </h1>
+          <div class="hero-bio">
+            <p>
+              <strong>Senior Full Stack Software Engineer</strong> with <strong>8+ years</strong> of
+              experience building scalable enterprise applications, CRM integrations, automation systems, ERP solutions and
+              headless CMS architectures. Specialised in <strong>PHP, WordPress, Laravel, Slim Framework, React.js, Angular,
+              CRM integrations, </strong> and <strong>AI-powered workflows</strong>. Advanced delivery across WordPress and PHP ecosystems, headless builds, PSD / Figma / XD to WordPress
+              conversions, custom plugin development, SEO-focused optimization and dependable API integrations.
+            </p>
+            <div class="stats">
+              <div class="stat">
+                <div class="stat-num">8+</div>
+                <div class="stat-label">Years experience</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">100+</div>
+                <div class="stat-label">Projects shipped</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">30+</div>
+                <div class="stat-label">Live websites</div>
+              </div>
+            </div>
+          </div>
+          <div class="cta-row">
+            <a href="mailto:amtalhasheikh@gmail.com" class="btn btn-primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Let's talk
+            </a>
+            <a href="#projects" class="btn btn-ghost">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-6h-2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+              View work
+            </a>
+          </div>
+        </div>
 
-    <!-- jQuery  -->
+        <aside class="hero-card" aria-label="Quick contact">
+          <div class="hero-card-head">
+            <div class="avatar">TS</div>
+            <div>
+              <h3>Available for projects</h3>
+              <p>Lahore, Pakistan · Remote · On-site</p>
+            </div>
+          </div>
+          <div class="contact-list" id="contact">
+            <a class="contact-item" href="tel:+923104031226">
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.86 19.86 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg></span>
+              <div>
+                <div class="label">Phone</div>
+                <div class="value">+92 310-4031226</div>
+              </div>
+            </a>
+            <a class="contact-item" href="mailto:amtalhasheikh@gmail.com">
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+              <div>
+                <div class="label">Email</div>
+                <div class="value">amtalhasheikh@gmail.com</div>
+              </div>
+            </a>
+            <a class="contact-item" href="https://wa.me/923104031226" target="_blank" rel="noopener noreferrer">
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>
+              <div>
+                <div class="label">WhatsApp</div>
+                <div class="value">Direct chat</div>
+              </div>
+            </a>
+            <a class="contact-item" href="https://www.linkedin.com/in/talha-sheikh-284a3a113/" target="_blank" rel="noopener noreferrer">
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>
+              <div>
+                <div class="label">LinkedIn</div>
+                <div class="value">talha-sheikh</div>
+              </div>
+            </a>
+            <a class="contact-item" href="https://www.italha.com" target="_blank" rel="noopener noreferrer">
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+              <div>
+                <div class="label">Address</div>
+                <div class="value">Lahore, Pakistan</div>
+              </div>
+            </a>
+          </div>
+        </aside>
+      </div>
+    </section>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- ============= TECH STACK ============= -->
+    <section id="stack" class="reveal">
+      <div class="section-head">
+        <div>
+          <div class="section-tag">01 · Tech Stack</div>
+          <h2>What I work with</h2>
+        </div>
+        <span class="section-line" aria-hidden="true"></span>
+      </div>
+      <div class="stack-grid">
+        <div class="stack-card">
+          <div class="stack-head">
+            <div class="stack-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 11v6c0 1.66 4.03 3 9 3s9-1.34 9-3v-6"/></svg></div>
+            <div>
+              <div class="stack-title">Backend &amp; APIs</div>
+              <div class="stack-sub">core services / data</div>
+            </div>
+          </div>
+          <div class="tag-row">
+            <span class="tag">PHP (Core)</span>
+            <span class="tag">Laravel</span>
+            <span class="tag">Slim Framework</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">API Integrations</span>
+            <span class="tag">Webhooks</span>
+            <span class="tag">Microservices</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">SQL Optimization</span>
+            <span class="tag">JWT Auth</span>
+            <span class="tag">OAuth</span>
+          </div>
+        </div>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
+        <div class="stack-card">
+          <div class="stack-head">
+            <div class="stack-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <div>
+              <div class="stack-title">Frontend</div>
+              <div class="stack-sub">interfaces / experience</div>
+            </div>
+          </div>
+          <div class="tag-row">
+            <span class="tag">React.js</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">Angular</span>
+            <span class="tag">JavaScript (ES6+)</span>
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">Tailwind CSS</span>
+            <span class="tag">Bootstrap</span>
+            <span class="tag">jQuery</span>
+          </div>
+        </div>
 
-    <script src="plugins/particles/particles.js"></script>
+        <div class="stack-card">
+          <div class="stack-head">
+            <div class="stack-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="14" x2="15" y2="14"/></svg></div>
+            <div>
+              <div class="stack-title">CMS &amp; Headless</div>
+              <div class="stack-sub">content architecture</div>
+            </div>
+          </div>
+          <div class="tag-row">
+            <span class="tag">WordPress Dev</span>
+            <span class="tag">Headless WordPress</span>
+            <span class="tag">Contentful CMS</span>
+            <span class="tag">Custom Plugins</span>
+            <span class="tag">Elementor</span>
+            <span class="tag">WooCommerce</span>
+            <span class="tag">Shopify</span>
+            <span class="tag">SEO Optimization</span>
+            <span class="tag">PSD / Figma / XD → WP</span>
+          </div>
+        </div>
 
-    <script src="plugins/animated/headline.js"></script>
+        <div class="stack-card">
+          <div class="stack-head">
+            <div class="stack-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 0-4 4v3H6a4 4 0 0 0 0 8h2v1a4 4 0 0 0 8 0v-1h2a4 4 0 0 0 0-8h-2V6a4 4 0 0 0-4-4z"/><circle cx="12" cy="13" r="2"/></svg></div>
+            <div>
+              <div class="stack-title">AI &amp; Automation</div>
+              <div class="stack-sub">intelligent workflows</div>
+            </div>
+          </div>
+          <div class="tag-row">
+            <span class="tag">Prompt Engineering</span>
+            <span class="tag">AI Workflow Automation</span>
+            <span class="tag">LLM Integration</span>
+            <span class="tag">OpenAI APIs</span>
+            <span class="tag">AI-powered Apps</span>
+            <span class="tag">Data Processing Automation</span>
+          </div>
+        </div>
 
-    <script src="plugins/counter/jquery.counterup.min.js"></script>
+        <div class="stack-card">
+          <div class="stack-head">
+            <div class="stack-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/></svg></div>
+            <div>
+              <div class="stack-title">Enterprise &amp; Integrations</div>
+              <div class="stack-sub">business systems</div>
+            </div>
+          </div>
+          <div class="tag-row">
+            <span class="tag">CRM Integration</span>
+            <span class="tag">Zoho CRM</span>
+            <span class="tag">Vendor Sync Systems</span>
+            <span class="tag">Queue Processing</span>
+            <span class="tag">ERP Development</span>
+            <span class="tag">Enterprise Architecture</span>
+            <span class="tag">Data Synchronization</span>
+            <span class="tag">AWS Infrastructure</span>
+            <span class="tag">Git</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <script src="plugins/counter/waypoints.min.js"></script>
+    <!-- ============= EXPERIENCE ============= -->
+    <section id="experience" class="reveal">
+      <div class="section-head">
+        <div>
+          <div class="section-tag">02 · Experience</div>
+          <h2>Career timeline</h2>
+        </div>
+        <span class="section-line" aria-hidden="true"></span>
+      </div>
+      <div class="card">
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dates">2022 — Present</div>
+            <h3 class="tl-title">Senior Full Stack Software Engineer</h3>
+            <div class="tl-co">Rolustech</div>
+            <p class="tl-desc">
+              Lead enterprise integrations and automation: Laravel / Slim backends, Zoho CRM ↔ WordPress sync engines,
+              queue-driven vendor pipelines, React / Next.js frontends and AI-assisted workflows on AWS.
+            </p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dates">2019 — 2022</div>
+            <h3 class="tl-title">Web Developer</h3>
+            <div class="tl-co">Prima Systems</div>
+            <p class="tl-desc">
+              Delivered production WordPress and PHP platforms, custom plugins, WooCommerce stores and Angular dashboards
+              for international clients with strict performance and SEO targets.
+            </p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dates">2017 — 2019</div>
+            <h3 class="tl-title">Web Developer</h3>
+            <div class="tl-co">Base29</div>
+            <p class="tl-desc">
+              Foundation years building responsive websites end-to-end — converting PSD / Figma / XD designs into
+              production-ready WordPress themes and shipping client work on tight deadlines.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <script src="plugins/filter/isotope.pkgd.min.js"></script>
+    <!-- ============= EDUCATION ============= -->
+    <section id="education" class="reveal">
+      <div class="section-head">
+        <div>
+          <div class="section-tag">03 · Education</div>
+          <h2>Academic background</h2>
+        </div>
+        <span class="section-line" aria-hidden="true"></span>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-card">
+          <div class="edu-years">2013 — 2017</div>
+          <div class="edu-degree">BSCS</div>
+          <div class="edu-school">Virtual University of Pakistan</div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-years">2010 — 2012</div>
+          <div class="edu-degree">FSc — Pre Engineering</div>
+          <div class="edu-school">Govt College of Science, Lahore</div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-years">2008 — 2009</div>
+          <div class="edu-degree">Matric</div>
+          <div class="edu-school">Center Model School, Samnabad, Lahore</div>
+        </div>
+      </div>
+    </section>
 
-    <script src="plugins/filter/masonry.pkgd.min.js"></script>
+    <!-- ============= FEATURED PROJECTS ============= -->
+    <section id="projects" class="reveal">
+      <div class="section-head">
+        <div>
+          <div class="section-tag">04 · Selected work</div>
+          <h2>Featured engineering projects</h2>
+        </div>
+        <span class="section-line" aria-hidden="true"></span>
+      </div>
 
-    <script src="plugins/filter/jquery.magnific-popup.min.js"></script>
+      <div class="feat-grid">
+        <article class="feat-card">
+          <div class="feat-tag">Enterprise · ERP</div>
+          <h3 class="feat-title">ERP Software Development</h3>
+          <p class="feat-desc">
+            Built enterprise ERP modules covering inventory, finance and reporting on a Laravel + MySQL stack. Designed
+            normalised schemas, role-based access, exportable reports and automation jobs that replaced repetitive manual
+            processes across multiple departments.
+          </p>
+          <div class="feat-stack">
+            <span class="tag">Laravel</span><span class="tag">MySQL</span><span class="tag">REST APIs</span>
+            <span class="tag">Queues</span><span class="tag">Reporting</span>
+          </div>
+        </article>
 
-    <script src="plugins/particles/particles-init.js"></script>
+        <article class="feat-card">
+          <div class="feat-tag">Integration · CRM</div>
+          <h3 class="feat-title">Zoho CRM → WordPress Vendor Automation</h3>
+          <p class="feat-desc">
+            Designed a bi-directional automation pipeline between Zoho CRM and WordPress for vendor syncing — including
+            notes synchronization, photo / media sync and queue-based processing. Webhooks and scheduled jobs keep
+            thousands of records consistent without manual intervention.
+          </p>
+          <div class="feat-stack">
+            <span class="tag">Zoho CRM</span><span class="tag">WordPress</span><span class="tag">PHP</span>
+            <span class="tag">Webhooks</span><span class="tag">Queue Workers</span>
+          </div>
+        </article>
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+        <article class="feat-card">
+          <div class="feat-tag">Headless · CMS</div>
+          <h3 class="feat-title">Headless CMS Platform (Contentful + Next.js)</h3>
+          <p class="feat-desc">
+            Built a scalable headless architecture with Contentful as the content backend and Next.js on the frontend.
+            ISR, structured content models, preview environments and SEO-friendly rendering enabled editors to publish
+            content independently while developers shipped components in parallel.
+          </p>
+          <div class="feat-stack">
+            <span class="tag">Next.js</span><span class="tag">Contentful</span><span class="tag">React</span>
+            <span class="tag">ISR / SSG</span><span class="tag">SEO</span>
+          </div>
+        </article>
 
-    <!-- App js -->
+        <article class="feat-card">
+          <div class="feat-tag">Frontend · APIs</div>
+          <h3 class="feat-title">React Integration &amp; API Systems</h3>
+          <p class="feat-desc">
+            Built reusable React frontend modules and integrated REST APIs into enterprise applications — covering
+            authentication (JWT / OAuth), pagination, optimistic UI and error-tolerant data layers. Improved load times
+            and developer experience across multiple internal tools.
+          </p>
+          <div class="feat-stack">
+            <span class="tag">React.js</span><span class="tag">REST APIs</span><span class="tag">JWT</span>
+            <span class="tag">OAuth</span><span class="tag">Tailwind</span>
+          </div>
+        </article>
+      </div>
+    </section>
 
-    <script src="js/app.js"></script>
-    <script>
-        var btn = $('#topbutton');
+    <!-- ============= WORDPRESS ACCORDION ============= -->
+    <section id="wordpress" class="reveal">
+      <div class="section-head">
+        <div>
+          <div class="section-tag">05 · WordPress portfolio</div>
+          <h2>100+ WordPress projects delivered</h2>
+        </div>
+        <span class="section-line" aria-hidden="true"></span>
+      </div>
 
-        $(window).scroll(function () {
-            if ($(window).scrollTop() > 300) {
-                btn.addClass('show');
-            } else {
-                btn.removeClass('show');
+      <div class="accordion" id="wpAccordion">
+        <button class="acc-head" id="wpAccBtn" aria-expanded="false" aria-controls="wpAccBody" type="button">
+          <span class="acc-head-l">
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+            <span>
+              <span class="acc-title">Some of my WordPress websites</span><br />
+              <span class="acc-meta">Featured selection · click to expand</span>
+            </span>
+          </span>
+          <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
+            <span class="acc-count" id="wpCount">32 sites</span>
+            <span class="acc-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </span>
+        </button>
+        <div class="acc-body" id="wpAccBody" role="region" aria-labelledby="wpAccBtn">
+          <div class="acc-inner">
+            <p style="margin: 0 0 1.25rem; color: var(--text-soft); font-size: 0.93rem;">
+              A curated sample of delivered WordPress / WooCommerce / Headless WordPress sites. Each link opens the live
+              production site in a new tab.
+            </p>
+            <div class="wp-grid" id="wpGrid">
+              <!-- Populated by JS -->
+            </div>
+            <p style="margin: 1.5rem 0 0; font-size: 0.85rem; color: var(--text-muted);">
+              Want the full archive of 100+ delivered builds? Visit
+              <a href="https://www.italha.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">italha.com</a>
+              or get in touch directly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============= REFERENCES ============= -->
+    <section id="references" class="reveal">
+      <div class="section-head">
+        <div>
+          <div class="section-tag">06 · References</div>
+          <h2>What people say</h2>
+        </div>
+        <span class="section-line" aria-hidden="true"></span>
+      </div>
+      <div class="ref-grid">
+        <article class="ref-card">
+          <p class="ref-quote">
+            I have worked with Talha on a range of website designs, e-commerce solutions and core development. His service
+            is creative, timely and accurate. He is a great developer who knows how to bring up solutions for more sales
+            and revenue.
+          </p>
+          <div class="ref-name">Owais Gilani</div>
+          <div class="ref-role">Creative Director</div>
+        </article>
+        <article class="ref-card">
+          <p class="ref-quote">
+            Talha developed many websites for me and my clients. His dedication to his work and knowledge — especially of
+            WordPress and Laravel — is outstanding. It is always a good experience working with him.
+          </p>
+          <div class="ref-name">Adeel Adil</div>
+          <div class="ref-role">Digital Marketing Manager</div>
+        </article>
+        <article class="ref-card">
+          <p class="ref-quote">
+            Talha is very reliable, dedicated and knowledgeable. He is quick, accurate, has great analytical skills and is
+            a perfect web developer. It is an absolute pleasure to work with him.
+          </p>
+          <div class="ref-name">Ahmed Zafar</div>
+          <div class="ref-role">Senior Software Quality Assurance</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============= FINAL CTA / CONTACT ============= -->
+    <section class="reveal" aria-labelledby="cta-heading">
+      <div class="section-head">
+        <div>
+          <div class="section-tag">07 · Get in touch</div>
+          <h2 id="cta-heading">Let's build something great</h2>
+        </div>
+        <span class="section-line" aria-hidden="true"></span>
+      </div>
+      <div class="cta-card">
+        <div>
+          <h3>Have a complex problem worth solving?</h3>
+          <p>
+            From CRM automation and ERP modules to headless platforms and AI-driven workflows — I help teams ship
+            production-grade software fast. Reach out and let's discuss the brief.
+          </p>
+        </div>
+        <div class="contact-list">
+          <a class="contact-item" href="mailto:amtalhasheikh@gmail.com">
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+            <div>
+              <div class="label">Email</div>
+              <div class="value">amtalhasheikh@gmail.com</div>
+            </div>
+          </a>
+          <a class="contact-item" href="tel:+923104031226">
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.86 19.86 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg></span>
+            <div>
+              <div class="label">Phone / WhatsApp</div>
+              <div class="value">+92 310-4031226</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      © <span id="y"></span> Talha Sheikh · Senior Full Stack Software Engineer
+    </p>
+  </footer>
+
+  <script>
+    (function () {
+      /* ---------- Year ---------- */
+      var yEl = document.getElementById("y");
+      if (yEl) yEl.textContent = new Date().getFullYear();
+
+      /* ---------- Theme ---------- */
+      var root = document.documentElement;
+      var KEY = "ts-theme";
+      var stored = null;
+      try { stored = localStorage.getItem(KEY); } catch (e) {}
+      if (stored === "dark" || stored === "light") {
+        root.setAttribute("data-theme", stored);
+      } else {
+        root.setAttribute("data-theme", "dark");
+      }
+      var themeBtn = document.getElementById("themeToggle");
+      if (themeBtn) {
+        themeBtn.addEventListener("click", function () {
+          var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+          root.setAttribute("data-theme", next);
+          try { localStorage.setItem(KEY, next); } catch (e) {}
+        });
+      }
+
+      /* ---------- Sticky header shadow ---------- */
+      var header = document.getElementById("site-header");
+      function onScroll() {
+        if (!header) return;
+        header.classList.toggle("scrolled", window.scrollY > 16);
+      }
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+
+      /* ---------- Mobile menu ---------- */
+      var menuBtn = document.getElementById("menuToggle");
+      var navLinks = document.getElementById("nav-links");
+      if (menuBtn && navLinks) {
+        menuBtn.addEventListener("click", function () {
+          var open = navLinks.classList.toggle("open");
+          menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+        navLinks.querySelectorAll("a").forEach(function (a) {
+          a.addEventListener("click", function () {
+            navLinks.classList.remove("open");
+            menuBtn.setAttribute("aria-expanded", "false");
+          });
+        });
+      }
+
+      /* ---------- WordPress portfolio data ---------- */
+      var wpProjects = [
+        { name: "Skin Laser & Surgery", url: "https://www.skinandlasers.com/" },
+        { name: "Schweiger Dermatology Group", url: "https://www.schweigerderm.com/" },
+        { name: "Bernstein Medical", url: "https://www.bernsteinmedical.com/" },
+        { name: "Porter & York", url: "https://porterandyork.com/" },
+        { name: "Purity Peptide", url: "https://www.puritypeptide.com/" },
+        { name: "Brown Bag Popcorn Co.", url: "https://www.brownbagpopcornco.com/" },
+        { name: "Good Batch", url: "https://thegoodbatch.com/" },
+        { name: "Cannabis Certified", url: "https://www.cannabiscertified.org/" },
+        { name: "Cannabis Training Institute", url: "https://cannabistraininginstitute.com/" },
+        { name: "iMusic Academy", url: "https://imusicacademy.com/" },
+        { name: "Insight Eye Clinic", url: "https://insighteye.com.au/" },
+        { name: "Mind Scholar", url: "https://mindscholar.com.au/" },
+        { name: "Brian Francis DMD", url: "https://www.brianfrancisdmd.com/" },
+        { name: "American Bancshares Mortgage", url: "https://myabsm.com/" },
+        { name: "Linda G. Williams Consulting", url: "https://www.lwilliamsconsulting.com/" },
+        { name: "Pinnacle Claim Services", url: "https://www.pinnacleclaimservices.com/" },
+        { name: "Windsor Marketplace", url: "https://marketplace.windsorlifesettlements.com/" },
+        { name: "Elysee Homes", url: "https://elyseehomes.com/" },
+        { name: "Kanthan Realty", url: "https://www.kanthanrealty.com/" },
+        { name: "Abio Properties", url: "https://abioproperties.com/" },
+        { name: "Milestone Gem", url: "https://milestonegem.com/" },
+        { name: "Orchid Nest", url: "https://www.orchidnest.com/" },
+        { name: "Little Posy", url: "https://www.littleposy.com.au/" },
+        { name: "Aqua View Fencing", url: "https://www.aquaviewfencing.com/" },
+        { name: "Dunning's Fuel", url: "https://www.dunningsfuel.com.au/" },
+        { name: "United Service Dog", url: "https://www.unitedservicedog.com/" },
+        { name: "Trishia Grace", url: "https://trishiagrace.com/" },
+        { name: "L'opportunità Italiana", url: "https://lopportunitaitaliana.com/" },
+        { name: "Auto Warranty POA", url: "https://www.autowarrantypoa.com/" },
+        { name: "Fixit Services", url: "https://fixit-services.net/" },
+        { name: "Willow Tree Media", url: "http://willowtreemedia.com/" },
+        { name: "Prima Systems", url: "https://primasystems.net/" }
+      ];
+
+      var grid = document.getElementById("wpGrid");
+      var countEl = document.getElementById("wpCount");
+      if (grid) {
+        var html = wpProjects.map(function (p) {
+          return (
+            '<a class="wp-item" href="' + p.url + '" target="_blank" rel="noopener noreferrer">' +
+              '<span class="dot" aria-hidden="true"></span>' +
+              '<span class="name">' + p.name + '</span>' +
+              '<span class="ext"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>' +
+            '</a>'
+          );
+        }).join("");
+        grid.innerHTML = html;
+      }
+      if (countEl) countEl.textContent = wpProjects.length + " sites · 100+ delivered";
+
+      /* ---------- Accordion ---------- */
+      var accordion = document.getElementById("wpAccordion");
+      var accBtn = document.getElementById("wpAccBtn");
+      var accBody = document.getElementById("wpAccBody");
+      if (accordion && accBtn && accBody) {
+        accBtn.addEventListener("click", function () {
+          var isOpen = accordion.classList.toggle("open");
+          accBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          if (isOpen) {
+            accBody.style.maxHeight = accBody.scrollHeight + "px";
+          } else {
+            accBody.style.maxHeight = "0px";
+          }
+        });
+        window.addEventListener("resize", function () {
+          if (accordion.classList.contains("open")) {
+            accBody.style.maxHeight = accBody.scrollHeight + "px";
+          }
+        });
+      }
+
+      /* ---------- Reveal on scroll ---------- */
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!reduce && "IntersectionObserver" in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              e.target.classList.add("visible");
+              io.unobserve(e.target);
             }
-        });
-
-        btn.on('click', function (e) {
-            e.preventDefault();
-            $('html, body').animate({
-                scrollTop: 0
-            }, '300');
-        });
-
-        // Wait for window load
-        setTimeout(function () {
-            // Animate loader off screen
-            $(".se-pre-con").fadeOut("slow");
-        }, 2000);
-    </script>
-
+          });
+        }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+        document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
+      } else {
+        document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("visible"); });
+      }
+    })();
+  </script>
 </body>
-
 </html>
