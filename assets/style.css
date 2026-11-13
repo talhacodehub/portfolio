@@ -820,7 +820,8 @@
       .acc-count { white-space: normal; text-align: left; }
     }
 
-    .acc-body {
+    /* Collapsed only when JS is running; without JS the list stays visible. */
+    html.js .acc-body {
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.5s var(--ease);
@@ -961,15 +962,16 @@
     footer a { color: var(--accent); text-decoration: none; }
 
     /* ---------- Reveal animation ---------- */
-    .reveal {
+    /* Scoped to html.js (set by an inline script in <head>) so content stays visible without JS. */
+    html.js .reveal {
       opacity: 0;
       transform: translateY(24px);
       transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
     }
-    .reveal.visible { opacity: 1; transform: none; }
+    html.js .reveal.visible { opacity: 1; transform: none; }
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      .reveal { opacity: 1; transform: none; transition: none; }
-      .acc-body { transition: none; }
+      html.js .reveal { opacity: 1; transform: none; transition: none; }
+      html.js .acc-body { transition: none; }
     }

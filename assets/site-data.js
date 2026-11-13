@@ -1,4 +1,8 @@
-/* Structured portfolio content for italha.com — edit here to update the page. */
+/*
+ * Structured portfolio content for italha.com — edit here to update the page,
+ * then run `node scripts/prerender.js` to write the content into index.html.
+ * (This file is a build input only; the browser does not load it.)
+ */
 window.SITE_DATA = {
   profile: {
     name: "Talha Khalid",
